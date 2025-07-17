@@ -9,12 +9,12 @@ With the same viewing angle, the code converts the 360° video to a perspective 
 The code also rotates the original direction-of-arrival (DOA) labels to new DOA labels centered at the fixed viewing angle.
 The new DOA labels are compared with the FOV in the perspective video to get binary onscreen/offscreen event labels.
 
-Please check the [challenge webpage](https://dcase.community/challenge2025/) for details missing in this repository.
+Please check the [task description paper](https://arxiv.org/abs/2507.12042) and [challenge webpage](https://dcase.community/challenge2025/) for details missing in this repository.
 
 ## Getting started
 ### Git clone
 You can use git clone and move into the directory.
-```
+```bash
 git clone https://github.com/SonyResearch/dcase2025_stereo_seld_data_generator.git
 cd dcase2025_stereo_seld_data_generator
 ```
@@ -23,14 +23,14 @@ cd dcase2025_stereo_seld_data_generator
 The provided system has been tested on python 3.8.17.
 
 You can prepare a python environment. E.g., if you use pyenv, you can run the following lines.
-```
+```bash
 pyenv install 3.8.17
 pyenv virtualenv 3.8.17 dcase2025_stereo_seld_data_generator
 pyenv local dcase2025_stereo_seld_data_generator
 ```
 
 You can continue to install it using the line below.
-```
+```bash
 pip install -r requirements.txt
 ```
 
@@ -68,7 +68,7 @@ The code will make audio, video, and metadata files under `target_dir`/`tag_data
 ```
 
 Then, you can run the code to make stereo audio, perspective video, and metadata files from the source FOA audio, 360° video, and metadata files.
-```
+```bash
 python generate_stereo_seld_data.py
 ```
 
@@ -95,12 +95,12 @@ You put the new source data (`foa_dev`, `metadata_dev`, and `video_dev`) under `
 ```
 
 Then, you can edit the `metadata_paths` variable in `generate_stereo_seld_data.py`.
-```
+```python
 metadata_paths = sorted(glob.glob("{}/metadata_dev/dev-train-synth/*.csv".format(source_dir)))
 ```
 
 Finally, you can run the code to make stereo audio, perspective video, and metadata files from your own synthetic FOA audio / 360° video recordings.
-```
+```bash
 python generate_stereo_seld_data.py
 ```
 
@@ -111,6 +111,7 @@ python generate_stereo_seld_data.py
 * `make_aziele2valuexy_0deg.py` script is a reference for making the binary file.
 
 ## Citation
+If you found this tool useful, please consider citing
 ```bibtex
 @article{shimada2025stereo,
   title={Stereo Sound Event Localization and Detection with Onscreen/offscreen Classification},
