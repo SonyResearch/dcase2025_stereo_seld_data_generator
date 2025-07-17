@@ -111,7 +111,14 @@ python generate_stereo_seld_data.py
 * `make_aziele2valuexy_0deg.py` script is a reference for making the binary file.
 
 ## Citation
-Under preparation.
+```bibtex
+@article{shimada2025stereo,
+  title={Stereo Sound Event Localization and Detection with Onscreen/offscreen Classification},
+  author={Shimada, Kazuki and Politis, Archontis and Roman, Iran R and Sudarsanam, Parthasaarathy and Diaz-Guerra, David and Pandey, Ruchi and Uchida, Kengo and Koyama, Yuichiro and Takahashi, Naoya and Shibuya, Takashi and Takahashi, Shusuke and Virtanen, Tuomas and Mitsufuji, Yuki},
+  journal={arXiv preprint arXiv:2507.12042},
+  year={2025}
+}
+```
 
 ## Reference
 This code is built on the following papers and the open source repositories.
